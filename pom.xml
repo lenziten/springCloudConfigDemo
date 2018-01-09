@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   
   <groupId>com.demo</groupId>
-  <artifactId>springBootDemo</artifactId>
+  <artifactId>springCloudConfigDemo</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   
   <name>springBootDemo Maven Webapp</name>
@@ -21,10 +21,6 @@
   </parent>
   
     <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
         <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
 		<dependency>
 		    <groupId>mysql</groupId>
@@ -55,10 +51,10 @@
 	        <artifactId>spring-boot-devtools</artifactId>
 	        <optional>true</optional>
 	    </dependency>
-	    <dependency>
-	        <groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-eureka-server</artifactId>
-	    </dependency>
+		    <dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-config-server</artifactId>
+		</dependency>
 		<!-- <dependency>
 		    <groupId>org.mybatis</groupId>
 		    <artifactId>mybatis</artifactId>
@@ -115,7 +111,7 @@
 	</dependencyManagement>
   
   <build>
-    <finalName>springBootDemo</finalName>
+    <finalName>springCloudConfigDemo</finalName>
          <resources>
         	<resource>
         		<directory>src/main/java</directory>
