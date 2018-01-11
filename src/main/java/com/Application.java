@@ -5,11 +5,13 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.context.embedded.ConfigurableEmbeddedServletContainer;
 import org.springframework.boot.context.embedded.EmbeddedServletContainerCustomizer;
 import org.springframework.cloud.config.server.EnableConfigServer;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 @EnableAutoConfiguration//(exclude={MapperScannerConfigurer.class})
 //@SpringBootApplication
+@EnableEurekaClient
 @EnableConfigServer
 @ComponentScan
 public class Application implements EmbeddedServletContainerCustomizer{
